@@ -18,5 +18,3 @@ type vitalSigns = {
   bloodPressure: string;
   respiratoryRate: number;
 };
-
-export type PatientList = Patient[];

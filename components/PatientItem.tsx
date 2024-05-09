@@ -16,7 +16,7 @@ const PatientItem = ({ item }: Props) => {
   const title = item.gender === "male" ? "Mr." : "Ms.";
 
   return (
-    <View className="w-full bg-white  rounded-md  transition-opacity  p-2 justify-between items-center  flex-row mt-4 ">
+    <View className="w-full bg-white  rounded-md  transition-opacity  shadow p-2 justify-between items-center  flex-row mt-4 ">
       <Image
         source={{ uri: item.picture }}
         className="h-20 w-20 rounded-full "

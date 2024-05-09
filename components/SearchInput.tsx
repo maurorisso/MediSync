@@ -1,6 +1,6 @@
 import { View, Text, TextInput, Pressable } from "react-native";
 import React from "react";
-import { Filter } from "lucide-react-native";
+import { Filter, Search } from "lucide-react-native";
 
 type Props = {
   searchText: string;

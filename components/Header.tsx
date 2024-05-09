@@ -1,14 +1,14 @@
 import { View, Text } from "react-native";
 import React from "react";
+import { Hospital } from "lucide-react-native";
 
 type Props = {};
 
 const Header = (props: Props) => {
   return (
-    <View>
-      <Text className="text-2xl font-semibold  text-center p-4  ">
-        MediSync
-      </Text>
+    <View className="flex  flex-row items-center p-4 gap-1">
+      <Hospital size={32} className=" text-blue-800  " />
+      <Text className="text-2xl font-semibold   ">MediSync</Text>
     </View>
   );
 };

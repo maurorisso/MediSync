@@ -1,10 +1,10 @@
-import { Text, SafeAreaView, FlatList, ScrollView } from "react-native";
+import { Text, SafeAreaView, FlatList, ScrollView, View } from "react-native";
 
 import { useMemo, useState, useEffect } from "react";
-import PatientItem from "./components/PatientItem";
 import mockList from "./data/patients";
 import SearchInput from "./components/SearchInput";
 import Header from "./components/Header";
+import PatientListView from "./components/PatientListView";
 
 const App = () => {
   const [searchText, setSearchText] = useState<string>("");
@@ -28,21 +28,13 @@ const App = () => {
 
   return (
     <SafeAreaView className=" bg-blue-50 h-full items-center justify-center">
-      <ScrollView className="w-full px-4 ">
-        <Header />
-        <SearchInput searchText={searchText} setSearchText={setSearchText} />
-
-        <FlatList
-          data={filteredPatients}
-          keyExtractor={(item) => item.id.toString()}
-          className=" flex-col  "
-          renderItem={({ item }) => <PatientItem item={item} />}
+      <Header />
+      <SearchInput searchText={searchText} setSearchText={setSearchText} />
+      <ScrollView className="w-full px-4 mt-2 ">
+        <PatientListView
+          debouncedSearchText={debouncedSearchText}
+          filteredPatients={filteredPatients}
         />
-        {filteredPatients.length === 0 && (
-          <Text className="text-2xl    text-blue-800  pt-10 text-center ">
-            No results found for "{debouncedSearchText}"
-          </Text>
-        )}
       </ScrollView>
     </SafeAreaView>
   );
