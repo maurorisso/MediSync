@@ -1,41 +1,29 @@
-import { Text, SafeAreaView, FlatList, ScrollView, View } from "react-native";
-
-import { useMemo, useState, useEffect } from "react";
-import mockList from "./data/patients";
-import SearchInput from "./components/SearchInput";
+import React, { useState } from "react";
+import { SafeAreaView, View, Text } from "react-native";
 import Header from "./components/Header";
 import PatientListView from "./components/PatientListView";
+import SearchInput from "./components/SearchInput";
+import useDebouncedSearch from "./hooks/useDebouncedSearch";
+import mockList from "./data/patients";
+import HeaderList from "./components/HeaderList";
 
 const App = () => {
   const [searchText, setSearchText] = useState<string>("");
-  const [debouncedSearchText, setDebouncedSearchText] = useState<string>("");
-
-  useEffect(() => {
-    const timerId = setTimeout(() => {
-      setDebouncedSearchText(searchText);
-    }, 200);
-
-    return () => {
-      clearTimeout(timerId);
-    };
-  }, [searchText]);
-
-  const filteredPatients = useMemo(() => {
-    return mockList.filter((patient) =>
-      patient.name.toLowerCase().includes(debouncedSearchText.toLowerCase())
-    );
-  }, [debouncedSearchText]);
+  const filteredPatients = useDebouncedSearch({
+    searchText,
+    delay: 200,
+    data: mockList,
+  });
 
   return (
-    <SafeAreaView className=" bg-blue-50 h-full items-center justify-center">
+    <SafeAreaView className="bg-blue-50 h-full items-center justify-center px-4">
       <Header />
       <SearchInput searchText={searchText} setSearchText={setSearchText} />
-      <ScrollView className="w-full px-4 mt-2 ">
-        <PatientListView
-          debouncedSearchText={debouncedSearchText}
-          filteredPatients={filteredPatients}
-        />
-      </ScrollView>
+      <HeaderList filteredPatients={filteredPatients} />
+      <PatientListView
+        filteredPatients={filteredPatients}
+        searchText={searchText}
+      />
     </SafeAreaView>
   );
 };

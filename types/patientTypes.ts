@@ -1,10 +1,11 @@
 export type Patient = {
   picture: string;
   diagnosis: string;
-  status: "critical" | "stable" | "serious";
+  status: "critical" | "stable" | "serious" | "uknwown";
   id: number;
   bloodType: "A" | "B" | "AB" | "O";
   name: string;
+  lastName: string;
   gender: "male" | "female";
   vitalSigns: vitalSigns;
   age: number;

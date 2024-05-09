@@ -7,7 +7,8 @@ const patients: Patient[] = [
     status: "critical",
     id: 4,
     bloodType: "O",
-    name: "Michael Brown",
+    name: "Michael",
+    lastName: "Johnson",
     gender: "male",
     vitalSigns: {
       heartRate: 85,
@@ -25,7 +26,8 @@ const patients: Patient[] = [
     status: "serious",
     id: 5,
     bloodType: "A",
-    name: "Jessica Taylor",
+    name: "Jessica",
+    lastName: "Smith",
     gender: "female",
     vitalSigns: {
       heartRate: 70,
@@ -43,7 +45,8 @@ const patients: Patient[] = [
     status: "stable",
     id: 6,
     bloodType: "B",
-    name: "Christopher Lee",
+    name: "Christopher",
+    lastName: "Brown",
     gender: "male",
     vitalSigns: {
       heartRate: 100,
@@ -61,7 +64,8 @@ const patients: Patient[] = [
     status: "stable",
     id: 7,
     bloodType: "A",
-    name: "Emma Garcia",
+    name: "Emma",
+    lastName: "Garcia",
     gender: "female",
     vitalSigns: {
       heartRate: 82,
@@ -79,7 +83,8 @@ const patients: Patient[] = [
     status: "critical",
     id: 8,
     bloodType: "O",
-    name: "Daniel Martinez",
+    name: "Daniel",
+    lastName: "Martinez",
     gender: "male",
     vitalSigns: {
       heartRate: 88,
@@ -97,7 +102,8 @@ const patients: Patient[] = [
     status: "serious",
     id: 9,
     bloodType: "B",
-    name: "Olivia Hernandez",
+    name: "Olivia",
+    lastName: "Rodriguez",
     gender: "female",
     vitalSigns: {
       heartRate: 75,
@@ -115,7 +121,8 @@ const patients: Patient[] = [
     status: "stable",
     id: 10,
     bloodType: "AB",
-    name: "William Lopez",
+    name: "William",
+    lastName: "Lopez",
     gender: "male",
     vitalSigns: {
       heartRate: 80,
