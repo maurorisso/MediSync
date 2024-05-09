@@ -16,7 +16,7 @@ const PatientItem = ({ item }: Props) => {
   const title = item.gender === "male" ? "Mr." : "Ms.";
 
   return (
-    <View className="w-full bg-white  rounded-lg   p-2 justify-between items-center  flex-row mt-4 ">
+    <View className="w-full bg-white  rounded-md  transition-opacity  p-2 justify-between items-center  flex-row mt-4 ">
       <Image
         source={{ uri: item.picture }}
         className="h-20 w-20 rounded-full "
@@ -30,14 +30,14 @@ const PatientItem = ({ item }: Props) => {
           </Text>
         </View>
         <Text className="text-lg text-gray-800">{item.diagnosis}</Text>
-        <View className={`flex flex-row  justify-between`}>
+        <View className={`flex flex-row  justify-between `}>
           <View className={`flex flex-row items-center justify-center  w-fit`}>
             <View
               className={`h-2.5 w-2.5 rounded-full  bg-${status}-400 mr-1 `}
             ></View>
             <Text className={`text-base capitalize`}>{item.status} </Text>
           </View>
-          <View className=" bg-gray-50  font-base  px-2 py-1 rounded-md   ">
+          <View className=" bg-gray-100  font-base  px-2 py-1 rounded-md   ">
             <Text> Room {item.bedNumber}</Text>
           </View>
         </View>
