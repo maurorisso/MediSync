@@ -10,7 +10,7 @@ type Props = {
 const HeaderList = ({ filteredPatients }: Props) => {
   const headerText = filteredPatients.length > 0 ? ` Patients ` : ``;
   return (
-    <View className=" pt-5  pb-4  w-full flex  flex-row   items-center  justify-between  ">
+    <View className=" pt-5  pb-4   w-full flex  flex-row   items-center  justify-between  ">
       <Text className="text-xl font-semibold text-blue-800 ">{headerText}</Text>
       <Pressable className=" flex items-center justify-center   ">
         <UserPlus size={26} color={"#2D5282"} />

@@ -4,7 +4,6 @@ import Header from "../../components/Header";
 import SearchInput from "../../components/SearchInput";
 import useDebouncedSearch from "../../hooks/useDebouncedSearch";
 import mockList from "../../data/patients";
-import HeaderList from "./components/HeaderList";
 import PatientListView from "./components/PatientListView";
 
 const HomeScreen = () => {
@@ -16,11 +15,11 @@ const HomeScreen = () => {
   });
 
   return (
-    <SafeAreaView className="bg-blue-50 h-full items-center justify-center">
-      <View className="px-4  ">
+    <SafeAreaView className="bg-blue-50 h-full  flex  items-center justify-center">
+      <View className="px-4">
         <Header />
         <SearchInput searchText={searchText} setSearchText={setSearchText} />
-        <HeaderList filteredPatients={filteredPatients} />
+        {/* <HeaderList filteredPatients={filteredPatients} /> */}
         <PatientListView
           filteredPatients={filteredPatients}
           searchText={searchText}

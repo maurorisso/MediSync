@@ -16,6 +16,7 @@ const PatientListView = ({ filteredPatients, searchText }: Props) => {
     useNavigation<NativeStackNavigationProp<AppStackParameterList>>();
   return (
     <FlatList
+      showsVerticalScrollIndicator={false}
       data={filteredPatients}
       keyExtractor={(item) => item.id.toString()}
       renderItem={({ item }) => (

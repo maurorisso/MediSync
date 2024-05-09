@@ -1,6 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "./screens/HomeScreem/HomeScreen";
+import HomeScreen from "./screens/HomeScreen/HomeScreen";
 import PatientDetailsScreen from "./screens/PatientDetailsScreen/PatientDetailsScreen";
 import React from "react";
 import { AppStackParameterList } from "./types/navigation";

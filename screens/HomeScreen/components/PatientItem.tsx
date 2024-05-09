@@ -17,7 +17,7 @@ const Patientuser = ({ user }: Props) => {
   const title = user.gender === "male" ? "Mr." : "Ms.";
 
   return (
-    <View className="w-full bg-white  rounded-md  transition-opacity  shado p-2 justify-between items-center  flex-row mt-4    ">
+    <View className="w-full bg-white  rounded-xl p-4  transition-opacity  shadow-sm  justify-between items-center  flex-row mt-4    ">
       <Image
         source={{ uri: user.picture }}
         className="h-20 w-20 rounded-full "
@@ -41,7 +41,7 @@ const Patientuser = ({ user }: Props) => {
               {user.status}{" "}
             </Text>
           </View>
-          <View className=" bg-gray-100  font-base  px-2 py-1 rounded-md   ">
+          <View className=" bg-blue-50  font-base  px-2 py-1 rounded-md   ">
             <Text> Room {user.bedNumber}</Text>
           </View>
         </View>
