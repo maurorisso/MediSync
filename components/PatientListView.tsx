@@ -14,7 +14,7 @@ const PatientListView = ({ filteredPatients, searchText }: Props) => {
     <FlatList
       data={filteredPatients}
       keyExtractor={(item) => item.id.toString()}
-      className=" flex-col w-full   px-4 "
+      className=" flex-col w-full   px-4"
       renderItem={({ item }) => <PatientItem user={item} />}
       ListEmptyComponent={
         <Text className="text-2xl    text-blue-800  pt-5 text-center   ">

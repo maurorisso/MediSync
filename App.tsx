@@ -1,30 +1,16 @@
-import React, { useState } from "react";
-import { SafeAreaView, View, Text } from "react-native";
-import Header from "./components/Header";
-import PatientListView from "./components/PatientListView";
-import SearchInput from "./components/SearchInput";
-import useDebouncedSearch from "./hooks/useDebouncedSearch";
-import mockList from "./data/patients";
-import HeaderList from "./components/HeaderList";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import HomeScreen from "./screens/HomeScreen";
 
 const App = () => {
-  const [searchText, setSearchText] = useState<string>("");
-  const filteredPatients = useDebouncedSearch({
-    searchText,
-    delay: 200,
-    data: mockList,
-  });
+  const Stack = createNativeStackNavigator();
 
   return (
-    <SafeAreaView className="bg-blue-50 h-full items-center justify-center px-4">
-      <Header />
-      <SearchInput searchText={searchText} setSearchText={setSearchText} />
-      <HeaderList filteredPatients={filteredPatients} />
-      <PatientListView
-        filteredPatients={filteredPatients}
-        searchText={searchText}
-      />
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
