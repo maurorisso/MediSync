@@ -1,6 +1,6 @@
 import { View, Text, Image } from "react-native";
 import React from "react";
-import { Patient } from "../types/patientTypes";
+import { Patient } from "../../../types/patientTypes";
 
 type Props = {
   user: Patient;

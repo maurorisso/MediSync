@@ -18,7 +18,6 @@ const patients: Patient[] = [
     },
     age: 28,
     bedNumber: "B-103",
-    lastCheckup: new Date("2024-05-06"),
   },
   {
     picture: "https://randomuser.me/api/portraits/women/89.jpg",
@@ -37,7 +36,6 @@ const patients: Patient[] = [
     },
     age: 40,
     bedNumber: "A-105",
-    lastCheckup: new Date("2024-05-05"),
   },
   {
     picture: "https://randomuser.me/api/portraits/men/45.jpg",
@@ -56,7 +54,6 @@ const patients: Patient[] = [
     },
     age: 52,
     bedNumber: "C-102",
-    lastCheckup: new Date("2024-05-04"),
   },
   {
     picture: "https://randomuser.me/api/portraits/women/21.jpg",
@@ -75,7 +72,6 @@ const patients: Patient[] = [
     },
     age: 19,
     bedNumber: "B-205",
-    lastCheckup: new Date("2024-05-03"),
   },
   {
     picture: "https://randomuser.me/api/portraits/men/76.jpg",
@@ -94,7 +90,6 @@ const patients: Patient[] = [
     },
     age: 60,
     bedNumber: "A-306",
-    lastCheckup: new Date("2024-05-02"),
   },
   {
     picture: "https://randomuser.me/api/portraits/women/34.jpg",
@@ -113,7 +108,6 @@ const patients: Patient[] = [
     },
     age: 35,
     bedNumber: "C-104",
-    lastCheckup: new Date("2024-05-01"),
   },
   {
     picture: "https://randomuser.me/api/portraits/men/56.jpg",
@@ -132,7 +126,6 @@ const patients: Patient[] = [
     },
     age: 42,
     bedNumber: "B-107",
-    lastCheckup: new Date("2024-04-30"),
   },
 ];
 

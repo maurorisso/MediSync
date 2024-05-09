@@ -1,10 +1,10 @@
 import { View, Text, FlatList, Pressable } from "react-native";
 import React from "react";
-import PatientItem from "./PatientItem";
-import { Patient } from "../types/patientTypes";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { AppStackParameterList } from "../types/navigation";
+import { AppStackParameterList } from "../../../types/navigation";
+import { Patient } from "../../../types/patientTypes";
+import PatientItem from "./PatientItem";
 
 type Props = {
   filteredPatients: Patient[];

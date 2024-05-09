@@ -10,7 +10,6 @@ export type Patient = {
   vitalSigns: vitalSigns;
   age: number;
   bedNumber: string;
-  lastCheckup: Date;
 };
 
 type vitalSigns = {

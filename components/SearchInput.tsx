@@ -13,7 +13,7 @@ const SearchInput = ({ searchText, setSearchText }: Props) => {
       placeholder="Search.."
       value={searchText}
       onChangeText={setSearchText}
-      className=" w-3/4 p-4 h-15 mt-5  mb-2.5  border-gray-200 border rounded-md bg-white"
+      className=" p-4   w-[300]  m-auto h-15  mb-2.5  border-gray-200 border rounded-md bg-white"
     />
   );
 };
