@@ -9,7 +9,7 @@ It is designed for healthcare professionals to efficiently manage patient inform
 <table>
   <tr>
     <td>Home Screen</td>
-     <td>Patient Details Screen</td>>
+     <td>Patient Details Screen</td>
   </tr>
   <tr>
     <td> <img style="border-radius: 30px;"  src="https://github.com/y0mauro/MediSync/assets/73178418/6902d89e-d262-400e-96d8-c29cd5d7a3d7" width="250" alt="Home Screen"/></td>
