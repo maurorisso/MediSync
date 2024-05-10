@@ -9,11 +9,14 @@ import PatientItem from "./PatientItem";
 type Props = {
   filteredPatients: Patient[];
   searchText: string;
+  navigation: any;
 };
 
-const PatientListView = ({ filteredPatients, searchText }: Props) => {
-  const navigation =
-    useNavigation<NativeStackNavigationProp<AppStackParameterList>>();
+const PatientListView = ({
+  filteredPatients,
+  searchText,
+  navigation,
+}: Props) => {
   return (
     <FlatList
       showsVerticalScrollIndicator={false}

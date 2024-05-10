@@ -5,8 +5,13 @@ import SearchInput from "../../components/SearchInput";
 import useDebouncedSearch from "../../hooks/useDebouncedSearch";
 import mockList from "../../data/patients";
 import PatientListView from "./components/PatientListView";
+import { AppStackParameterList } from "../../types/navigation";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+type Props = {
+  navigation: NativeStackNavigationProp<AppStackParameterList>;
+};
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }: Props) => {
   const [searchText, setSearchText] = useState<string>("");
   const filteredPatients = useDebouncedSearch({
     searchText,
@@ -23,6 +28,7 @@ const HomeScreen = () => {
         <PatientListView
           filteredPatients={filteredPatients}
           searchText={searchText}
+          navigation={navigation}
         />
       </View>
     </SafeAreaView>

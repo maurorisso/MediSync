@@ -1,22 +1,12 @@
 import React from "react";
-import {
-  View,
-  Text,
-  Image,
-  ScrollView,
-  SafeAreaView,
-  Pressable,
-} from "react-native";
+import { View, Text, SafeAreaView, Pressable, Button } from "react-native";
 import { Patient } from "../../types/patientTypes";
+import { ArrowLeft } from "lucide-react-native";
 import Header from "../../components/Header";
-import { HeartPulse, Thermometer, Gauge, Wind } from "lucide-react-native";
-import DetailsSection from "./components/DetailsSection";
-import VitalSign from "./components/VitalSignItem";
-import OverviewItem from "./components/OverViewItem";
+
 import OverViewSection from "./components/OverviewSection";
 import BasicInfoSection from "./components/BasicInfoSection";
 import VitalsSignSection from "./components/VitalsSignSection";
-import { useNavigation } from "@react-navigation/native";
 
 type Props = {
   route: {
@@ -26,8 +16,7 @@ type Props = {
   };
   navigation: any;
 };
-const PatientDetailsScreen = ({ route }: Props) => {
-  const navigation = useNavigation();
+const PatientDetailsScreen = ({ route, navigation }: Props) => {
   const {
     picture,
     name,
@@ -73,6 +62,12 @@ const PatientDetailsScreen = ({ route }: Props) => {
           bloodPressure={bloodPressure}
           respiratoryRate={respiratoryRate}
         />
+        <Pressable
+          onPress={() => navigation.goBack()}
+          className="bg-blue-800 p-4 rounded-md mt-8    w-1/6 flex-1 justify-center  items-center  text-center  "
+        >
+          <ArrowLeft size={24} color="white" />
+        </Pressable>
       </View>
     </SafeAreaView>
   );
