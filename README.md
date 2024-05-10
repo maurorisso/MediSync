@@ -13,6 +13,6 @@ It is designed for healthcare professionals to efficiently manage patient inform
   </tr>
   <tr>
     <td> <img style="border-radius: 30px;"  src="https://github.com/y0mauro/MediSync/assets/73178418/6902d89e-d262-400e-96d8-c29cd5d7a3d7" width="250" alt="Home Screen"/></td>
-    <td><img  style="border-radius: 30px;" src="https://github.com/y0mauro/MediSync/assets/73178418/59308d59-630c-48cc-83cb-4a698de2918c" width="250" alt="Patient Details Screen"/></td>
+    <td><img  style="border-radius: 30px;" src="https://github.com/y0mauro/MediSync/assets/73178418/0285e46e-3a3f-4334-97b4-897c1e521817" width="250" alt="Patient Details Screen"/></td>
   </tr>
  </table>
