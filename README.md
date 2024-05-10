@@ -12,7 +12,7 @@ It is designed for healthcare professionals to efficiently manage patient inform
      <td>Patient Details Screen</td>
   </tr>
   <tr>
-    <td> <img style="border-radius: 30px;"  src="https://github.com/y0mauro/MediSync/assets/73178418/6902d89e-d262-400e-96d8-c29cd5d7a3d7" width="250" alt="Home Screen"/></td>
-    <td><img  style="border-radius: 30px;" src="https://github.com/y0mauro/MediSync/assets/73178418/0285e46e-3a3f-4334-97b4-897c1e521817" width="250" alt="Patient Details Screen"/></td>
+    <td> <img style="border-radius: 30px;"  src="https://github.com/y0mauro/MediSync/assets/73178418/a1677f00-9e20-417a-aaff-b20d3d4baf85" width="300" alt="Home Screen"/></td>
+    <td><img  style="border-radius: 30px;" src="https://github.com/y0mauro/MediSync/assets/73178418/0285e46e-3a3f-4334-97b4-897c1e521817" width="300" alt="Patient Details Screen"/></td>
   </tr>
  </table>
