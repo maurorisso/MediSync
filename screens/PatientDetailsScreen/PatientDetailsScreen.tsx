@@ -21,21 +21,14 @@ const PatientDetailsScreen = ({ route, navigation }: Props) => {
     picture,
     name,
     lastName,
-    gender,
     diagnosis,
     status,
+    gender,
     bloodType,
     vitalSigns: { heartRate, temperature, bloodPressure, respiratoryRate },
     age,
     bedNumber,
   } = route.params.user;
-
-  const statusColor =
-    status === "critical"
-      ? "#F87171"
-      : status === "stable"
-      ? "#4ADE80"
-      : "#F9CC16";
 
   return (
     <SafeAreaView className=" flex-1 bg-blue-50 ">
@@ -44,6 +37,7 @@ const PatientDetailsScreen = ({ route, navigation }: Props) => {
 
         <BasicInfoSection
           diagnosis={diagnosis}
+          gender={gender}
           lastName={lastName}
           name={name}
           picture={picture}
